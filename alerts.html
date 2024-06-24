@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts</title>
+</head>
+<body>
+    <h1>Alerts</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Location</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Image Link</th>
+                <th>Humans Detected</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for alert in alerts %}
+            <tr>
+                <td>{{ alert.id }}</td>
+                <td>{{ alert.location }}</td>
+                <td>{{ alert.latitude }}</td>
+                <td>{{ alert.longitude }}</td>
+                <td>{{ alert.humans_detected }}</td>
+                <td>{{ alert.image_link }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>Ordered Locations</h2>
+    <h3>{{ ordered_locations }}</h3>
+</body>
+</html>

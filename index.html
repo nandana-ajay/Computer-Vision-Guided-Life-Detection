@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home Page</title>
+{% endblock %}
+
+{% block body %}
+<h1>Flood life detection server</h1>
+
+<div class="Upload">
+    <form method = "POST" action="/home" enctype="multipart/form-data">
+        <input type="file" name="file">
+        Location<input type="text" name="loc">
+        Latitude<input type="float" name="lat">
+        Longitude<input type="float" name="long">
+        <input type = "submit" value ="Upload">
+    </form>
+</div>
+{% endblock %}
